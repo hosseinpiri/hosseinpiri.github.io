@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hossein Piri</title>
+<meta name="description" content="Hossein Piri, Assistant Professor of Operations and Supply Chain Management at the Haskayne School of Business, University of Calgary. Research on human-aware optimization in healthcare and service operations.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+/* Layout: full-bleed photo banner, then alternating image-and-text bands; publications as a clean list; a quiet collaborator strip before the footer. */
+:root{
+  --bg:#fbfbf9;
+  --surface:#f0f2ee;
+  --fg:#1c2026;
+  --muted:#5b6370;
+  --rule:#d9dcd6;
+  --accent:#0f5f6b;
+  --accent-soft:#dcebec;
+  --display:"Newsreader",Georgia,"Times New Roman",serif;
+  --body:"IBM Plex Sans","Helvetica Neue",Arial,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#15181c; --surface:#1d2127; --fg:#e8e9e4; --muted:#a2a9b3; --rule:#2e343c;
+    --accent:#7fc6cf; --accent-soft:#1d3539; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#15181c; --surface:#1d2127; --fg:#e8e9e4; --muted:#a2a9b3; --rule:#2e343c;
+  --accent:#7fc6cf; --accent-soft:#1d3539; color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);font-size:17px;line-height:1.6;padding-block:0;padding-inline:0}
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent}
+a:hover,a:focus-visible{border-bottom-color:var(--accent)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+img{max-width:100%;display:block}
+.wrap{max-width:1080px;margin:0 auto;padding-inline:20px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);border-bottom:1px solid var(--rule);z-index:5}
+nav .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:6px 22px;padding-block:14px}
+nav .brand{font-family:var(--display);font-size:1.25rem;font-weight:600;color:var(--fg);margin-right:auto}
+nav a:not(.brand){font-size:.86rem;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+nav a:not(.brand):hover{color:var(--accent)}
+
+/* hero banner */
+.hero{position:relative;background:#0b0d10;color:#f3f4f0;overflow:hidden}
+.hero img{width:100%;height:clamp(360px,52vw,560px);object-fit:cover;object-position:62% 30%;opacity:.95}
+.hero .overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,10,12,.88) 0%,rgba(8,10,12,.72) 38%,rgba(8,10,12,.15) 70%,rgba(8,10,12,0) 100%)}
+.hero .text{position:absolute;inset:0;display:flex;align-items:center}
+.hero h1{font-family:var(--display);font-size:clamp(2.6rem,6vw,4.4rem);font-weight:500;line-height:1;margin:0 0 10px;text-wrap:balance;color:#fff}
+.hero .tag{font-family:var(--display);font-size:clamp(1.15rem,2.2vw,1.5rem);font-weight:400;color:#e2e5df;margin:0 0 14px;max-width:24em;line-height:1.35}
+.hero .role{font-size:.95rem;color:#b9bfb8;margin:0;max-width:30em}
+.hero .links{margin-top:22px}
+.hero .links a{color:#fff;border-color:rgba(255,255,255,.35)}
+.hero .links a:hover{border-color:#fff}
+.links{display:flex;flex-wrap:wrap;gap:10px}
+.links a{font-size:.9rem;padding:7px 14px;border:1px solid var(--rule);border-radius:999px;color:var(--fg)}
+.links a:hover{border-color:var(--accent);color:var(--accent)}
+
+section{padding-block:56px}
+section + section{border-top:1px solid var(--rule)}
+section.band{background:var(--surface)}
+.label{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 14px;font-weight:600}
+h2{font-family:var(--display);font-size:2.1rem;font-weight:500;line-height:1.15;margin:0 0 22px;text-wrap:balance}
+h3{font-family:var(--display);font-size:1.35rem;font-weight:500;margin:0 0 8px;line-height:1.25}
+p{margin:0 0 16px;max-width:68ch}
+
+.intro{display:grid;grid-template-columns:300px minmax(0,1fr);gap:48px;align-items:start}
+.portrait{border-radius:6px;overflow:hidden;aspect-ratio:4/5;background:var(--surface)}
+.portrait img{width:100%;height:100%;object-fit:cover}
+.caption{font-size:.84rem;color:var(--muted);margin-top:8px}
+
+.themes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+.themes .n{font-family:var(--display);font-size:2.4rem;color:var(--accent);line-height:1;margin-bottom:10px;font-weight:400}
+.themes p{font-size:.98rem}
+
+.videos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+.video{display:block;border:0;color:var(--fg)}
+.video .thumb{position:relative;border-radius:6px;overflow:hidden;aspect-ratio:16/9;background:#000}
+.video .thumb img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+.video:hover .thumb img{transform:scale(1.03)}
+@media (prefers-reduced-motion: reduce){.video:hover .thumb img{transform:none}}
+.video .play{position:absolute;left:50%;top:50%;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;background:rgba(255,255,255,.92);display:grid;place-items:center}
+.video .play::after{content:"";border-left:22px solid #0f5f6b;border-top:13px solid transparent;border-bottom:13px solid transparent;margin-left:5px}
+.video h3{margin:14px 0 4px}
+.video .m{color:var(--muted);font-size:.92rem}
+
+.news{list-style:none;margin:0;padding:0}
+.news li{display:grid;grid-template-columns:120px minmax(0,1fr);gap:14px;padding-block:10px;border-top:1px solid var(--rule)}
+.news li:last-child{border-bottom:1px solid var(--rule)}
+.news .d{color:var(--muted);font-size:.9rem;font-variant-numeric:tabular-nums}
+
+.pub{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 24px;padding-block:18px;border-top:1px solid var(--rule);align-items:start}
+.pub:last-of-type{border-bottom:1px solid var(--rule)}
+.pub .t{font-family:var(--display);font-size:1.22rem;font-weight:500;line-height:1.3}
+.pub .a{color:var(--muted);font-size:.95rem}
+.pub .v{font-size:.95rem}
+.pub .n{font-size:.9rem;color:var(--muted)}
+.pub .view{grid-row:1/span 4;align-self:center;font-size:.86rem;letter-spacing:.04em;text-transform:uppercase;padding:6px 14px;border:1px solid var(--rule);border-radius:999px;white-space:nowrap}
+.pub .view:hover{border-color:var(--accent)}
+.tag{display:inline-block;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:3px;background:var(--accent-soft);color:var(--accent);margin-left:8px;vertical-align:middle;font-weight:600}
+.grants{margin-top:36px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.grants div{padding:18px;border:1px solid var(--rule);border-radius:6px;font-size:.95rem}
+.grants strong{display:block;margin-bottom:4px}
+.grants em{color:var(--muted)}
+
+.two{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:48px;align-items:start}
+.courses{list-style:none;margin:0 0 18px;padding:0}
+.courses li{padding-block:8px;border-top:1px solid var(--rule)}
+.courses li:last-child{border-bottom:1px solid var(--rule)}
+.courses .c{font-weight:500}
+.courses .m{color:var(--muted);font-size:.93rem}
+.awards{padding:22px;background:var(--surface);border-radius:6px}
+.awards h3{margin-bottom:12px}
+.awards ul{margin:0;padding-left:18px;font-size:.95rem}
+.awards li{margin-bottom:8px}
+blockquote{margin:0 0 14px;padding-left:16px;border-left:3px solid var(--accent-soft);font-family:var(--display);font-size:1.12rem;line-height:1.45;max-width:60ch}
+blockquote cite{display:block;font-family:var(--body);font-style:normal;font-size:.85rem;color:var(--muted);margin-top:4px}
+
+.media{list-style:none;margin:0;padding:0}
+.media li{padding-block:8px;border-top:1px solid var(--rule)}
+.media li:last-child{border-bottom:1px solid var(--rule)}
+.media .o{color:var(--muted);font-size:.9rem}
+
+.collab{display:flex;flex-wrap:wrap;gap:14px 40px;align-items:baseline;margin-top:6px}
+.collab span{font-family:var(--display);font-size:1.25rem;color:var(--muted);font-weight:500;letter-spacing:.01em}
+
+footer{padding-block:40px 64px;color:var(--muted);font-size:.92rem;border-top:1px solid var(--rule)}
+footer .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px}
+footer address{font-style:normal;line-height:1.55}
+footer .email{font-weight:500;color:var(--fg);user-select:all}
+
+@media (max-width:800px){
+  .hero img{height:clamp(420px,110vw,560px);object-position:68% 20%}
+  .hero .overlay{background:linear-gradient(180deg,rgba(8,10,12,.05) 0%,rgba(8,10,12,.55) 45%,rgba(8,10,12,.92) 100%)}
+  .hero .text{align-items:flex-end;padding-bottom:28px}
+  .intro{grid-template-columns:minmax(0,1fr);gap:24px}
+  .portrait{width:220px}
+  .themes,.videos,.grants{grid-template-columns:minmax(0,1fr)}
+  .two{grid-template-columns:minmax(0,1fr);gap:24px}
+  .news li{grid-template-columns:minmax(0,1fr);gap:2px}
+  .pub{grid-template-columns:minmax(0,1fr)}
+  .pub .view{grid-row:auto;justify-self:start;margin-top:6px}
+  footer .wrap{grid-template-columns:minmax(0,1fr)}
+}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a class="brand" href="#top">Hossein Piri</a>
+  <a href="#about">About</a>
+  <a href="#research">Research</a>
+  <a href="#news">News</a>
+  <a href="#publications">Publications</a>
+  <a href="#teaching">Teaching</a>
+  <a href="#contact">Contact</a>
+</div></nav>
+
+<header class="hero" id="top">
+  <img src="hero.jpg" alt="Hossein Piri speaking on stage at the Haskayne School of Business">
+  <div class="overlay"></div>
+  <div class="text"><div class="wrap">
+    <h1>Hossein Piri</h1>
+    <p class="tag">Human-aware optimization for healthcare and service operations.</p>
+    <p class="role">Assistant Professor of Operations and Supply Chain Management<br>Haskayne School of Business, University of Calgary</p>
+    <div class="links">
+      <a href="CV_Hossein_Piri.pdf">Curriculum Vitae</a>
+      <a href="#publications">Publications</a>
+      <a href="https://profiles.ucalgary.ca/hossein-piri">University profile</a>
+    </div>
+  </div></div>
+</header>
+
+<section id="about"><div class="wrap">
+  <div class="intro">
+    <div>
+      <div class="portrait"><img src="photo.jpg" alt="Hossein Piri"></div>
+      <p class="caption">Speaking at the Haskayne Business Exchange, 2025.</p>
+    </div>
+    <div>
+      <p class="label">About</p>
+      <h2>Decisions that account for how people respond</h2>
+      <p>I am an Assistant Professor of Operations and Supply Chain Management at the Haskayne School of Business, University of Calgary. I received my Ph.D. in Management Science from the Sauder School of Business at the University of British Columbia, where I was advised by Steven Shechter, Tim Huh, and Mahesh Nagarajan.</p>
+      <p>My research combines analytical modeling and machine learning to design decisions that account for how people respond. More accurate predictions do not necessarily lead to better operational decisions, because decisions can change the behavior on which their success depends. A hospital may issue more alerts to protect patients yet prevent less harm when repeated interruptions create a cry-wolf effect. A retailer's assortment shapes how customers allocate their budgets. My work puts these responses inside the decision model and asks how they should shape the allocation of scarce resources, from clinicians' attention to a firm's inventory and service capacity.</p>
+      <p>Most of my work starts from a practitioner's problem. I collaborate with physicians, nurses, and hospital partners, and I hold an NSERC Discovery Grant and an SSHRC Insight Development Grant as principal investigator. My research has appeared in <em>Operations Research</em>, and I teach prescriptive analytics and supply chain analytics at the MBA and undergraduate levels.</p>
+      <div class="links"><a href="CV_Hossein_Piri.pdf">Download CV</a><a href="https://github.com/hosseinpiri">GitHub</a></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="research" class="band"><div class="wrap">
+  <p class="label">Research</p>
+  <h2>Three themes, one question</h2>
+  <div class="themes">
+    <div>
+      <div class="n">I</div>
+      <h3>Decision support under limited attention</h3>
+      <p>Bedside monitors and prescription systems fire far more warnings than clinicians can absorb, and each interruption makes the next one easier to ignore. I design alerting policies that treat attention as the scarce resource it is, and show that fewer alerts, chosen well, prevent more harm. With generative AI, the message that accompanies a warning becomes a decision too.</p>
+    </div>
+    <div>
+      <div class="n">II</div>
+      <h3>Learning and allocation in patient care</h3>
+      <p>Admission and follow-up decisions depend on scarce capacity, the cost of waiting, and whether patients return. These decisions also determine which patients the system later observes, so I study prediction and allocation together, from a resource-aware admission model for hypertensive pregnancies to adaptive follow-up after abnormal screening results.</p>
+    </div>
+    <div>
+      <div class="n">III</div>
+      <h3>Choice-based optimization</h3>
+      <p>In revenue management, customers respond to what they are offered. I study assortment and pricing when customers buy several products within a budget, booking policies for flexible products that let customers choose later, and recommendation systems whose suggestions may change what users want next.</p>
+    </div>
+  </div>
+</div></section>
+
+<section id="watch"><div class="wrap">
+  <p class="label">Watch</p>
+  <h2>The research in a few minutes</h2>
+  <div class="videos">
+    <a class="video" href="https://www.youtube.com/watch?v=OKuAXI_9gTA">
+      <div class="thumb"><img src="video_alerts.jpg" alt="Animation: When Less is More"><div class="play"></div></div>
+      <h3>When Less is More</h3>
+      <div class="m">A short animation of the prescription-alert paper. Fewer alerts, chosen well, prevent more harm.</div>
+    </a>
+    <a class="video" href="https://www.youtube.com/watch?v=XM7WG-598FU&amp;t=55s">
+      <div class="thumb"><img src="video_hbe.jpg" alt="Talk: The Alarming Truth"><div class="play"></div></div>
+      <h3>The Alarming Truth</h3>
+      <div class="m">Supporting clinician well-being and saving lives in healthcare. Haskayne Business Exchange, March 2025.</div>
+    </a>
+  </div>
+</div></section>
+
+<section id="news" class="band"><div class="wrap">
+  <p class="label">News</p>
+  <h2>Latest</h2>
+  <ul class="news">
+    <li><span class="d">May 2026</span><span>Named one of <a href="https://poetsandquants.com/2026/05/17/2026-best-40-under-40-business-professors-hossein-piri-haskayne-school-of-business-university-of-calgary/">Poets&amp;Quants' Best 40 Under 40 MBA Professors</a>, selected from more than 1,700 nominations worldwide.</span></li>
+    <li><span class="d">2026</span><span>Research seminars at CUHK Business School and HKU Business School.</span></li>
+    <li><span class="d">2026</span><span><em>AI-Enabled Decision Support Systems for Patient Triage</em> published in the <em>Journal of Medical Artificial Intelligence</em>.</span></li>
+    <li><span class="d">2026</span><span>Joined the organizing committee of the 2027 MSOM Conference.</span></li>
+    <li><span class="d">2025</span><span><em>When Less is More</em> wins the Best Paper Award at the CBLS Workshop, Indiana University Kelley School of Business.</span></li>
+    <li><span class="d">2025</span><span>Awarded an NSERC Discovery Grant on personalized clinical alarm systems.</span></li>
+    <li><span class="d">2025</span><span>Awarded the CHAIR Fellowship for Research Excellence at Haskayne.</span></li>
+    <li><span class="d">2024</span><span>Awarded an SSHRC Insight Development Grant on nurse well-being and alarm design.</span></li>
+    <li><span class="d">2024</span><span>Received the Haskayne Superior Service Award.</span></li>
+  </ul>
+</div></section>
+
+<section id="publications"><div class="wrap">
+  <p class="label">Publications</p>
+  <h2>Papers</h2>
+
+  <div class="pub">
+    <div class="t">Individualized Dynamic Patient Monitoring Under Alarm Fatigue</div>
+    <div class="a">Hossein Piri, Tim Huh, Steven Shechter, Darren Hudson</div>
+    <div class="v"><em>Operations Research</em>, 70(5), 2749–2766, 2022</div>
+    <div class="n">Winner, CORS Health Care Operational Research SIG competition, 2021. Finalist, Lee B. Lusted Student Prize, Society for Medical Decision Making, 2020.</div>
+    <a class="view" href="https://pubsonline.informs.org/doi/10.1287/opre.2022.2300">View</a>
+  </div>
+
+  <div class="pub">
+    <div class="t">When Less is More: Optimizing Prescription Alerts under Fatigue<span class="tag">Minor revision</span></div>
+    <div class="a">Michael Lingzhi Li, Hossein Piri</div>
+    <div class="v"><em>Manufacturing &amp; Service Operations Management</em></div>
+    <div class="n">Best Paper Award, CBLS Workshop, Indiana University Kelley School of Business, 2025.</div>
+    <a class="view" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5119868">View</a>
+  </div>
+
+  <div class="pub">
+    <div class="t">Assortment Optimization Under Multiple-Discrete Customer Choices<span class="tag">Final round</span></div>
+    <div class="a">Heng Zhang, Hossein Piri, Tim Huh, Hongmin Li</div>
+    <div class="v"><em>Manufacturing &amp; Service Operations Management</em></div>
+    <div class="n"></div>
+    <a class="view" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3988982">View</a>
+  </div>
+
+  <div class="pub">
+    <div class="t">Firm-Centric and Customer-Centric Flexible Products<span class="tag">R&amp;R</span></div>
+    <div class="a">Hossein Piri, Tim Huh, Eunho Chang, Chulung Lee</div>
+    <div class="v"><em>Manufacturing &amp; Service Operations Management</em></div>
+    <div class="n"></div>
+    <a class="view" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4580410">View</a>
+  </div>
+
+  <div class="pub">
+    <div class="t">AI-Enabled Decision Support Systems for Patient Triage: A Scoping Review</div>
+    <div class="a">Sam Hoang Hong, Kathryn Crowder, Hossein Piri, Deepa Suryanrayan, Sana Sajjad, Jon Rokne, Gouri Ginde</div>
+    <div class="v"><em>Journal of Medical Artificial Intelligence</em>, 9:65, 2026</div>
+    <div class="n"></div>
+    <a class="view" href="https://doi.org/10.21037/jmai-2026-0045">View</a>
+  </div>
+
+  <div class="pub">
+    <div class="t">Trade-offs for Breast Cancer Screening Strategies in Canada: A Microsimulation Modeling Study<span class="tag">Under review</span></div>
+    <div class="a">Hamed Milani, Marco Bijvank, Omar Khan, Darren Brenner, Hossein Piri</div>
+    <div class="v"><em>Medical Decision Making</em></div>
+  </div>
+
+  <h2 style="margin-top:44px">Work in progress</h2>
+
+  <div class="pub">
+    <div class="t">A Dynamic and Resource-Aware Machine Learning Risk Model for Hospital Admission of Patients with Hypertensive Disorders of Pregnancy</div>
+    <div class="a">Allison Grimsted, Hossein Piri, Brian Denton, Ashley Bartell</div>
+    <div class="n">To be presented at the 2026 INFORMS Annual Meeting, San Francisco.</div>
+  </div>
+
+  <div class="pub">
+    <div class="t">Human-Centric Optimization of Workforce Scheduling under Fatigue</div>
+    <div class="a">Saeed Aramesh, Babak Abbasi, Ron Wakefield, Hossein Piri</div>
+    <div class="n"></div>
+    <div class="v"></div>
+    <a class="view" href="https://github.com/hosseinpiri/ai-workforce-planning-fatigue-absenteeism/blob/main/Human_Centric_Workforce_Scheduling_Fatigue.pdf">View</a>
+  </div>
+
+  <div class="pub">
+    <div class="t">AI-Enabled Clinical Decision Support and Nurse Well-Being: How Alarm Design and Workload Affect Nurse Fatigue</div>
+    <div class="a">Marco Bijvank, Ghazal Bozorgmehry, Hossein Piri</div>
+    <div class="n">Supported by an SSHRC Insight Development Grant.</div>
+  </div>
+
+  <div class="pub">
+    <div class="t">Dynamic Recommendations with Learning and Preference Formation</div>
+    <div class="a">Jiangze Han, Meichun Lin, Hossein Piri, Xinyuan Zhang</div>
+  </div>
+
+  <div class="pub">
+    <div class="t">Learning Who to Support: Optimizing Adaptive Patient Follow-Up under Uncertain Risk and Adherence</div>
+    <div class="a">Marco Bijvank, Ya-Tang Chuang, Hossein Piri</div>
+  </div>
+
+  <div class="grants">
+    <div><strong>NSERC Discovery Grant</strong>Principal Investigator, 2025–2030, CAD $201,500<br><em>Designing Clinical Alarm Systems: Enhancing Patient Safety Through Personalized Predictive Models in Multi-Patient Care Settings</em></div>
+    <div><strong>SSHRC Insight Development Grant</strong>Principal Investigator, 2024–2026, CAD $69,118<br><em>Enhancing Nurse Well-being: Innovating Hospital Conditions for Improved Mental Health</em></div>
+    <div><strong>CHAIR Fellowship for Research Excellence</strong>Haskayne School of Business, 2025–2030</div>
+  </div>
+</div></section>
+
+<section id="teaching" class="band"><div class="wrap">
+  <p class="label">Teaching</p>
+  <h2>Cases, discussion, and decisions students can defend</h2>
+  <div class="two">
+    <div>
+      <ul class="courses">
+        <li><span class="c">Prescriptive Analytics in Business</span> <span class="m">MBA, MGST 631. Designed and launched the course: optimization, simulation, reinforcement learning, case discussions, and hands-on Python.</span></li>
+        <li><span class="c">Supply Chain Analytics</span> <span class="m">BComm, SCMA 451. Forecasting, inventory, and network design, with a live multi-week supply chain simulation.</span></li>
+        <li><span class="c">Business Analytics</span> <span class="m">BComm, MGST 391.</span></li>
+        <li><span class="c">Logistics and Operations Management</span> <span class="m">Undergraduate, University of British Columbia.</span></li>
+      </ul>
+      <p>I teach by case and discussion. Students analyze a problem, challenge the assumptions behind a model, and defend a recommendation in front of their peers. I am developing a Formula 1 race-strategy simulation case for MBA prescriptive analytics with Saed Alizamir.</p>
+      <blockquote>“I have never been in a class with such consistently high attendance rates over a semester.”<cite>From a student evaluation</cite></blockquote>
+      <blockquote>“I have never had a prof so much as ask for feedback mid semester, nevermind actually acting upon that feedback.”<cite>From a student evaluation</cite></blockquote>
+    </div>
+    <div class="awards">
+      <h3>Teaching recognition</h3>
+      <ul>
+        <li><a href="https://poetsandquants.com/2026/05/17/2026-best-40-under-40-business-professors-hossein-piri-haskayne-school-of-business-university-of-calgary/">Poets&amp;Quants Best 40 Under 40 MBA Professors</a>, 2026</li>
+        <li>Superior Service Award, Haskayne School of Business, 2024</li>
+        <li>Nominee, Students' Union Teaching Excellence Award, University of Calgary, 2023</li>
+        <li>Killam Teaching Award, University of British Columbia, 2022</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<section id="media"><div class="wrap">
+  <p class="label">In the media</p>
+  <h2>Supply chains in the news</h2>
+  <ul class="media">
+    <li><a href="https://www.youtube.com/watch?v=ktnLWAjdTx8">Who wins while Canada Post is on strike?</a> <span class="o">CBC News, December 2024</span></li>
+    <li><a href="https://www.ctvnews.ca/video/c3002541-ctv-national-news--potential-montreal-port-strike?playlistId=1.7056555">Potential labour dispute at the Port of Montreal</a> <span class="o">CTV National News, September 2024</span></li>
+    <li><a href="https://www.cbc.ca/player/play/video/9.6486587">The impact of a rail work stoppage on Canada's supply chains</a> <span class="o">CBC News, August 2024</span></li>
+    <li>The Labour Minister's decision on CN Rail's call for binding arbitration <span class="o">CBC Radio, August 2024</span></li>
+  </ul>
+  <p class="label" style="margin-top:44px">Collaborators</p>
+  <div class="collab">
+    <span>Harvard Business School</span>
+    <span>University of Michigan</span>
+    <span>UBC Sauder</span>
+    <span>Cumming School of Medicine</span>
+    <span>St. Paul's Hospital, Vancouver</span>
+  </div>
+</div></section>
+
+<footer id="contact">
+  <div class="wrap">
+    <address>
+      <strong>Contact</strong><br>
+      <span class="email">hossein.piri@ucalgary.ca</span><br>
+      Scurfield Hall 136<br>
+      Haskayne School of Business, University of Calgary<br>
+      2500 University Drive NW, Calgary, AB T2N 1N4, Canada
+    </address>
+    <div>
+      <a href="https://profiles.ucalgary.ca/hossein-piri">University profile</a><br>
+      <a href="https://github.com/hosseinpiri">GitHub</a><br>
+      <a href="CV_Hossein_Piri.pdf">Curriculum vitae (PDF)</a><br><br>
+      © 2026 Hossein Piri
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
