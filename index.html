@@ -99,11 +99,12 @@ p{margin:0 0 16px;max-width:68ch}
 
 .pub{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 24px;padding-block:18px;border-top:1px solid var(--rule);align-items:start}
 .pub:last-of-type{border-bottom:1px solid var(--rule)}
+.pub .t,.pub .a,.pub .v,.pub .n{grid-column:1}
 .pub .t{font-family:var(--display);font-size:1.22rem;font-weight:500;line-height:1.3}
 .pub .a{color:var(--muted);font-size:.95rem}
 .pub .v{font-size:.95rem}
 .pub .n{font-size:.9rem;color:var(--muted)}
-.pub .view{grid-row:1/span 4;align-self:center;font-size:.86rem;letter-spacing:.04em;text-transform:uppercase;padding:6px 14px;border:1px solid var(--rule);border-radius:999px;white-space:nowrap}
+.pub .view{grid-column:2;grid-row:1/span 4;align-self:center;font-size:.86rem;letter-spacing:.04em;text-transform:uppercase;padding:6px 14px;border:1px solid var(--rule);border-radius:999px;white-space:nowrap}
 .pub .view:hover{border-color:var(--accent)}
 .tag{display:inline-block;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:3px;background:var(--accent-soft);color:var(--accent);margin-left:8px;vertical-align:middle;font-weight:600}
 .grants{margin-top:36px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
@@ -129,6 +130,18 @@ blockquote cite{display:block;font-family:var(--body);font-style:normal;font-siz
 .media li:last-child{border-bottom:1px solid var(--rule)}
 .media .o{color:var(--muted);font-size:.9rem}
 
+.gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:28px}
+.gallery figure{margin:0}
+.gallery img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:6px;display:block}
+.gallery figcaption{font-size:.85rem;color:var(--muted);margin-top:8px;line-height:1.4}
+.banner{margin:0 0 32px;position:relative;border-radius:6px;overflow:hidden}
+.banner img{width:100%;aspect-ratio:2.4/1;object-fit:cover;display:block}
+.banner figcaption{font-size:.85rem;color:var(--muted);margin-top:8px}
+.stills{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin:0 0 24px}
+.stills a{display:block}
+.stills img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:6px;display:block}
+.stills .m{font-size:.9rem;color:var(--muted);margin-top:8px}
+@media (max-width:760px){.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}.stills{grid-template-columns:1fr}}
 .collab{display:flex;flex-wrap:wrap;gap:14px 40px;align-items:baseline;margin-top:6px}
 .collab span{font-family:var(--display);font-size:1.25rem;color:var(--muted);font-weight:500;letter-spacing:.01em}
 
@@ -191,7 +204,7 @@ footer .email{font-weight:500;color:var(--fg);user-select:all}
       <h2>Decisions that account for how people respond</h2>
       <p>I am an Assistant Professor of Operations and Supply Chain Management at the Haskayne School of Business, University of Calgary. I received my Ph.D. in Management Science from the Sauder School of Business at the University of British Columbia, where I was advised by Steven Shechter, Tim Huh, and Mahesh Nagarajan.</p>
       <p>My research combines analytical modeling and machine learning to design decisions that account for how people respond. More accurate predictions do not necessarily lead to better operational decisions, because decisions can change the behavior on which their success depends. A hospital may issue more alerts to protect patients yet prevent less harm when repeated interruptions create a cry-wolf effect. A retailer's assortment shapes how customers allocate their budgets. My work puts these responses inside the decision model and asks how they should shape the allocation of scarce resources, from clinicians' attention to a firm's inventory and service capacity.</p>
-      <p>Most of my work starts from a practitioner's problem. I collaborate with physicians, nurses, and hospital partners, and I hold an NSERC Discovery Grant and an SSHRC Insight Development Grant as principal investigator. My research has appeared in <em>Operations Research</em>, and I teach prescriptive analytics and supply chain analytics at the MBA and undergraduate levels.</p>
+      <p>Most of my work starts from a practitioner's problem. I collaborate with physicians, nurses, and hospital partners, and I hold an NSERC Discovery Grant and an SSHRC Insight Development Grant as principal investigator. My research has appeared in <em>Operations Research</em> and is forthcoming in <em>Manufacturing &amp; Service Operations Management</em>, and I teach prescriptive analytics and supply chain analytics at the MBA and undergraduate levels.</p>
       <div class="links"><a href="CV_Hossein_Piri.pdf">Download CV</a><a href="https://github.com/hosseinpiri">GitHub</a></div>
     </div>
   </div>
@@ -234,12 +247,19 @@ footer .email{font-weight:500;color:var(--fg);user-select:all}
       <div class="m">Supporting clinician well-being and saving lives in healthcare. Haskayne Business Exchange, March 2025.</div>
     </a>
   </div>
+  <div class="gallery">
+    <figure><img src="gallery_podium.jpg" alt="Hossein Piri speaking at a Haskayne graduate programs event"><figcaption>Haskayne graduate programs event, 2026.</figcaption></figure>
+    <figure><img src="gallery_panel.jpg" alt="Research panel at IMSI, Chicago, 2026"><figcaption>Research panel, IMSI, Chicago, 2026.</figcaption></figure>
+    <figure><img src="gallery_cbc_studio.jpg" alt="Hossein Piri in the CBC Calgary studio with Rob Brown"><figcaption>In the CBC Calgary studio with Rob Brown.</figcaption></figure>
+    <figure><img src="gallery_cbc_field.jpg" alt="Hossein Piri on location for CBC News"><figcaption>On location for CBC News, Calgary.</figcaption></figure>
+  </div>
 </div></section>
 
 <section id="news" class="band"><div class="wrap">
   <p class="label">News</p>
   <h2>Latest</h2>
   <ul class="news">
+    <li><span class="d">October 2026</span><span><em>Assortment Optimization Under Multiple-Discrete Customer Choices</em> accepted at <em>Manufacturing &amp; Service Operations Management</em>.</span></li>
     <li><span class="d">May 2026</span><span>Named one of <a href="https://poetsandquants.com/2026/05/17/2026-best-40-under-40-business-professors-hossein-piri-haskayne-school-of-business-university-of-calgary/">Poets&amp;Quants' Best 40 Under 40 MBA Professors</a>, selected from more than 1,700 nominations worldwide.</span></li>
     <li><span class="d">2026</span><span>Research seminars at CUHK Business School and HKU Business School.</span></li>
     <li><span class="d">2026</span><span><em>AI-Enabled Decision Support Systems for Patient Triage</em> published in the <em>Journal of Medical Artificial Intelligence</em>.</span></li>
@@ -273,7 +293,7 @@ footer .email{font-weight:500;color:var(--fg);user-select:all}
   </div>
 
   <div class="pub">
-    <div class="t">Assortment Optimization Under Multiple-Discrete Customer Choices<span class="tag">Final round</span></div>
+    <div class="t">Assortment Optimization Under Multiple-Discrete Customer Choices<span class="tag">Forthcoming</span></div>
     <div class="a">Heng Zhang, Hossein Piri, Tim Huh, Hongmin Li</div>
     <div class="v"><em>Manufacturing &amp; Service Operations Management</em></div>
     <div class="n"></div>
@@ -344,6 +364,7 @@ footer .email{font-weight:500;color:var(--fg);user-select:all}
 <section id="teaching" class="band"><div class="wrap">
   <p class="label">Teaching</p>
   <h2>Cases, discussion, and decisions students can defend</h2>
+  <figure class="banner"><img src="teaching.jpg" alt="Hossein Piri speaking at a Haskayne School of Business event"><figcaption>Speaking at a Haskayne graduate programs event, 2026.</figcaption></figure>
   <div class="two">
     <div>
       <ul class="courses">
@@ -371,6 +392,10 @@ footer .email{font-weight:500;color:var(--fg);user-select:all}
 <section id="media"><div class="wrap">
   <p class="label">In the media</p>
   <h2>Supply chains in the news</h2>
+  <div class="stills">
+    <a href="https://www.youtube.com/watch?v=ktnLWAjdTx8"><img src="media_canadapost.jpg" alt="CBC News: The National, Canada Post strike impact"><div class="m">CBC News: The National on the Canada Post strike, December 2024.</div></a>
+    <a href="https://www.ctvnews.ca/video/c3002541-ctv-national-news--potential-montreal-port-strike?playlistId=1.7056555"><img src="media_ctv.jpg" alt="CTV National News: potential Montreal port strike"><div class="m">CTV National News on the potential Port of Montreal strike, September 2024.</div></a>
+  </div>
   <ul class="media">
     <li><a href="https://www.youtube.com/watch?v=ktnLWAjdTx8">Who wins while Canada Post is on strike?</a> <span class="o">CBC News, December 2024</span></li>
     <li><a href="https://www.ctvnews.ca/video/c3002541-ctv-national-news--potential-montreal-port-strike?playlistId=1.7056555">Potential labour dispute at the Port of Montreal</a> <span class="o">CTV National News, September 2024</span></li>
@@ -382,6 +407,7 @@ footer .email{font-weight:500;color:var(--fg);user-select:all}
     <span>Harvard Business School</span>
     <span>University of Michigan</span>
     <span>UBC Sauder</span>
+    <span>ASU W. P. Carey</span>
     <span>Cumming School of Medicine</span>
     <span>St. Paul's Hospital, Vancouver</span>
   </div>
